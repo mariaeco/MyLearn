@@ -1,0 +1,16 @@
+#UTILIZANDO MAKEFILE
+
+#para criar:
+
+echo. > Makefile
+
+#para Abrir (abre direto no vc code):
+code Makefile
+
+#para compilar
+mingw32-make.exe
+
+#para digitar só make e funcionar tem que fazer o seguinte:
+Vai no bloco de notas e cria um arquivo, colocar dentro dele:mingw32-make.exe
+e salvar como make.bat
+#pronto agora só precisamos digitar make e ele compila!

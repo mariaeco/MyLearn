@@ -1,0 +1,6 @@
+#INICIANDO SITE COM FLASK
+
+pip install flask
+
+Crie um arquivo app.py, que será seu aplicativo
+e começe o codigo puxando as dependencias: from flask import Flask

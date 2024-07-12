@@ -1,0 +1,36 @@
+CRIANDO AMBIENTE VIRTUAL
+
+#Para criar a pasta de ambiente virtual
+python -m venv venv
+
+#Para ativar
+.\venv\Scripts\activate #em mac ao inves de Scripts será bin
+
+#Caso a ativação não dê certo, execute o código abaixo que dará ok
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+#Para desativar é só digitar deactivate
+
+
+#Preciso instalar as extensões de Python Pylance e Django
+
+pip install django
+pip instalar pytest
+#voce vera que serao instalados dentro do ambiente virtual
+#para atualizar o pip:
+python -m pip install --upgrade pip
+python -m pip install pip setuptools wheel --upgrade
+
+#QUANDO o projeto no GIT, gerar a chave SSH, em empresas trabalham com a chave
+#SSH ao inves de html. COmo faço isso?
+git config --global user.name "Maria Marcolina Cardoso" #nome do usuario, o que vc quiser
+git config --global user.email "maria.marcolina.eco@gmail.com"
+git config --global init.defautBranch 
+ssh-keygen
+#ele vai pedir para vc dizer um arquivo para salvar a chave
+#vc digita o qualquer nome e será criado o arquivo com a chave.
+#Então vc entra em nome.pub e copia o código lá para dentro do git
+#No github: settings --: SSH AND GPG KEYS, NEW SSH KEY
+#e copia o codigo.
+
+#Pronto esta pronto para usuar
+Para a pasta venv não ir para o git, eu vou criar um arquivo .gitignore e digita dentro dele venv

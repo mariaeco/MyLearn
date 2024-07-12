@@ -1,0 +1,93 @@
+# TERMINAL - PRINCIPAIS COMANDOS
+# meu github: @mariaeco
+ 	password: pimpao2018
+
+PARA WINDOWS: ----------------------------------------------------------------------------------------------
+
+DIR - ver diretórios e pastas
+CLS - limpar screem
+DEL - deletar arquivo
+CD  - PARA ENTRAR EM PASTAS
+CD..- PARA SAIR DE PASTAS
+
+
+*Para compilar programas:
+C:
+gcc -c main.c -o main  # o nome criado pode ser qualquer um
+gcc main.c funcao.c -o main.exe
+para rodar ./main
+
+quando os arquivos estão em outras pastas, exemplo:
+gcc -c funcoes.c -I include/ -o compilados/funcoes.o
+#na pasta include colocos os arquivos.h
+#na pasta compilados ou obj, é onde os objetos criados serão guardados
+e rodo:
+gcc main.c funcao.c -o main.exe
+
+C++: 
+g++ -0 main main.cpp
+Multiarquivo (arquivo das funcoes) em c++:
+g++ -c funcao.cpp // arquivo.cpp de funcoes criar o arquivo .o
+g++ main.cpp funcao.o -o main.exe
+
+#sempre separar os arquivos nas pastas:
+#include: arquivos.h (headers)
+#obj: os objetos compilados .o (compilados)
+#src: source (os arquivos.c com as funções, as fontes)
+#apps: o main - os programas
+#bin: onde serao salvos os executaveis dos programas
+#agora:
+gcc -c src/funcoes.c -I include/ -o obj/funcoes.o
+gcc app/main.c obj/funcoes.o -I./include -o ./bin/main.exe
+
+#ou
+gcc app/main.c obj/*.o -I./include -o ./bin/main.exe
+
+*.o coloca todos os arquivos objetos que tiverem, 
+caso vc tenha mais de um e esteja utilizando-os no programa
+
+#depois eh so entrar na pasta bin e executar o programa:
+main.exe ou main ou ./main
+
+# Para mudar de partição --------------------------------------------------------------------
+Basta ir para o C:\ e digitar a:, e:, d:.. a particão que vc estiver utilizando
+
+PARA LINUX: -----------------------------------------------------------------------------------------------
+ls - LISTAR ARQUIVOS E PASTAS
+clear - limpar screem
+rm - deletar arquivo
+CD   - PARA ENTRAR EM PASTAS
+CD.. - PARA SAIR DE PASTAS
+tree . - ME MOSTRA AS PASTA E SUBPASTAS EM FORMATO DE ÁRVORE
+mkdir - criar diretorio
+move arquivo.c nomedapasta/ - mover arquivo
+more arquivo.c abri o arquivo no terminal
+
+VIM COMANDOS:
+vim arquivo.cpp ou vim arquivo.c # abre os aquivos
+i - para editar
+:wq - para sair e salvar
+
+*Para compilar programas:
+C:
+
+
+C++:
+	g++ main.cpp -o main
+	Para rodar o arquivo: ./main
+
+
+USANDO MAKEFILE
+-------------------------------------------------------------------------------------
+Após criar o arquivo Makefile para rodar basta apenas digitar no terminal:
+	make nome_do_programa
+
+Exemplo:
+	make CadastroPessoas
+
+Então o projeto é compilado.
+Para rodar, basta:
+	./CadastroPessoas
+
+make clean para limpar os arquivos
+

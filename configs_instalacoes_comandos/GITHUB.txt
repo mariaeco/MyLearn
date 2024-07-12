@@ -1,0 +1,34 @@
+GITHUB COMANDOS
+
+Crio o repositorio no github
+Crie uma pasta no computador para salvar o objeto do git,
+vá na pasta e clique com o botão direoto do mouse, e clique em: Git Bash Here
+Ele vai abrir o terminal. A partir daí vc irá conseguir mecher no git a partir do computador.
+
+Comandos:
+clear #limpa a tela
+git clone endereco https #clona o repositorio que vc quer para a pasta criada
+git status #mostra o status do repositorio
+git add . # adicionar a area de preparacao
+git commit -m "algum texto explicando o que você esta fazendo" #fazendo o commit de repositorio
+git log #mostra as mudanças
+git push origin main#empurra as mudanças para o github, para a nuvem
+
+#Observe: sempre que insiro um novo arquivo tenho que fazer: 
+1) git add . 
+2) git commit 
+3) git push
+refactor: alter nomedoarquivo.extencao
+
+git pull origin main #puxa da nuvem
+
+#criando branches
+git branch #checa as branches
+git branch nomedabranch #cria uma branch
+git checkout nomedabranch  # vai para a branch
+git add ./ #adiciona os arquivos
+git commit 
+git push origin nomedabranch #isso tem que ser feito dentro da branch, ou nao funciona
+git pull origin nomedabranch
+
+git checkout main #volta para a main

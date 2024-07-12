@@ -1,0 +1,78 @@
+UBUNTU TERMINAL
+
+cd /mnt/d
+ls -lh #listar arquivos
+
+PARA INSTALAR O WLS VER AULA 11- TERMINAL WINDOWSLINUXMACOS
+Tipos de gerenciadores virtuais: pip, pyenv virtualenv, pipenv, poetry, anaconda
+
+#------------------------------------------------------------------------
+POSSO CRIAR UM AMBIENTE VIRTUAL ASSIM 
+(Mas dessa forma, toda vez que entrar na pasta, terei que ativar o ambiente virtual):
+#Para criar a pasta de ambiente virtual
+python -m venv venv
+
+#Para ativar
+\venv\Scripts\activate #em mac ao inves de Scripts será bin
+source venv/bin/activate # para linux
+
+#Caso a ativação não dê certo, execute o código abaixo que dará ok
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+#Para desativar é só digitar deactivate
+
+
+#-------------------------------------------------------------------------
+AMBIENTE VIRTUAL PELO PYENV ----------------------------------------------
+No windows temos que instalar o WSL (Terminal com ambiente UBUNTU)
+Instalando PyENV: ver arquivo AULA 14: INSTALANDOPYENV
+
+1) verifique se o git está instalado:
+sudo apt-get install git
+
+2) Instale o pyenv
+curl https://pyenv.run | bash
+#reinicie o terminal
+3) abra o vs code pelo terminal: (digite code .), 
+procure o arquivo bashrc e copie o seguinte comando no final dele:
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+4) execute o comando: exec "$SHELL"
+#reinicie o terminal
+
+5) instale os pacotes (só copiar e colar):
+sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-de
+
+6) instalar os pugglins do virtual env
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+
+7) colar o codigo no final do arquivo bashrc 
+eval "$(pyenv virtualenv-init -)"
+
+8) executar:
+exec "$SHELL"
+
+#============== Apos os procedimentos acima para criar o ambiente virtual: ==================
+1)instalar o pyenv:
+pyenv install 3.9
+
+
+# ENtre na pasta que voce quer e:
+2)ver ambientes virtuais:
+ pyenv virtualenvs
+
+3)Criar um novo ambiente virtual:
+pyenv virtualenv 3.9 nome_do_ambiente
+
+4)ativar
+pyenv activate nome_do_ambiente
+
+5)desativar
+pyenv deactivate
+
+#===================== DEIXANDO O AMBIENTE VIRTUAL SEMPRE ATIVO ===========================
+pyenv local nome_do_ambiente
