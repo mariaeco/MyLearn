@@ -8,13 +8,13 @@ body {
     flex-wrap: wrap;
 }
 
-.dropdown {
+table .dropdown {
     min-width: 160px;
-    position: relative;
+    position: flex;
     margin: 30px;
 }
 
-.dropdown * {
+table .dropdown * {
     box-sizing: border-box;
 }
 
